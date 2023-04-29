@@ -12,17 +12,18 @@ class ExpensesController < ApplicationController
     @group = @groups..find(params[:group_id])
     @expense = Expense.new
   end
-  
+
   def create
     @group = Group.find(params[:group_id])
     @expense = @author.expenses.new(expense_params)
     return unless @expense.save
+
     @group_expense = GroupExpense.new(group_id: @group.id, expense_id: @expense.id)
     return unless @group_expenses.save
-    
+
     redirect_to group_expense_path(@group)
   end
-  
+
   private
 
   def expense_params
@@ -32,5 +33,4 @@ class ExpensesController < ApplicationController
   def set_user
     @author = current_user
   end
-  
 end

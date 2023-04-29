@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_action :set_user
-  
+
   def index
     @groups = @user.groups
   end
@@ -16,7 +16,7 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
   end
-  
+
   def create
     @group = Group.new(group_params)
     @group.user = @User
@@ -35,6 +35,5 @@ class GroupsController < ApplicationController
     def group_params
       params.require(:group).permit(:name, :icon)
     end
-
   end
 end
