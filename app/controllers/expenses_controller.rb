@@ -9,19 +9,20 @@ class ExpensesController < ApplicationController
 
   def new
     @groups = @author.groups
-    @group = @groups..find(params[:group_id])
+    @group = @groups.find(params[:group_id])
     @expense = Expense.new
   end
 
   def create
     @group = Group.find(params[:group_id])
     @expense = @author.expenses.new(expense_params)
+
     return unless @expense.save
 
-    @group_expense = GroupExpense.new(group_id: @group.id, expense_id: @expense.id)
+    @group_expenses = GroupExpense.new(group_id: @group.id, expense_id: @expense.id)
     return unless @group_expenses.save
 
-    redirect_to group_expense_path(@group)
+    redirect_to group_expenses_path(@group)
   end
 
   private
