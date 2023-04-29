@@ -16,5 +16,4 @@ RSpec.describe Expense, type: :model do
     @entity.amount = ''
     expect(@entity).not_to be_valid
   end
- 
 end
