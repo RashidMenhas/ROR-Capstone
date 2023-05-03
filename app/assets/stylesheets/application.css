@@ -39,17 +39,15 @@ a {
   height: 12vh;
 }
 
-
 @media only screen and (max-width: 1000px) {
   .container {
     width: 100vw;
     height: auto;
     margin-top: 1rem;
   }
-  
+
   .child {
     border: none;
-    
   }
 
   .img {
@@ -63,23 +61,21 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
+
   .auth {
     width: 90vw;
     height: auto;
-
   }
 
   .mobile {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    
   }
+
   .full-width {
     width: 100vw;
     height: auto;
   }
-
 }
