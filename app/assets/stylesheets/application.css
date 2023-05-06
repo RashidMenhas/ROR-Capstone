@@ -17,6 +17,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(194, 194, 194);
 }
 
 a {
@@ -26,7 +27,6 @@ a {
 .container {
   width: 50vw;
   height: auto;
-  margin-top: 1rem;
 }
 
 .child {
@@ -35,15 +35,89 @@ a {
   border-radius: 5px;
 }
 
-.nav {
-  height: 12vh;
+.sign_up {
+  background: none;
+  border: none;
+  color: gray;
+  width: 25vw;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign_in {
+  border: none;
+  width: 25vw;
+  padding: 0.5rem;
+  color: #3778c2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign_up:hover {
+  background: #3778c2;
+}
+
+.heading {
+  color: rgb(90, 89, 89);
+  margin-top: 1rem;
+}
+
+.btn1 {
+  margin-bottom: 3rem;
+  width: 25vw;
+  height: auto;
+}
+
+.navbar {
+  background-color: #3778c2;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-brand {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.backarrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1rem;
+}
+
+.text-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.p {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 @media only screen and (max-width: 1000px) {
   .container {
     width: 100vw;
     height: auto;
-    margin-top: 1rem;
   }
 
   .child {
@@ -77,5 +151,83 @@ a {
   .full-width {
     width: 100vw;
     height: auto;
+  }
+
+  .sign_in {
+    color: aliceblue;
+  }
+
+  .sign_up {
+    background: none;
+    border: none;
+    color: gray;
+  }
+
+  .sign_up:hover {
+    background: #3778c2;
+  }
+
+  .session {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .categories {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5fb523;
+    color: aliceblue;
+    padding: 1.5rem;
+  }
+
+  .text-border {
+    border: 1px solid white;
+    padding: 1rem 3.5rem;
+    color: white;
+  }
+
+  .card-bg {
+    background-color: aliceblue;
+    color: black;
+  }
+
+  .pr {
+    width: 70%;
+  }
+
+  .p {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-left: 10px;
+  }
+
+  .log {
+    margin-left: 10px;
+  }
+
+  .navbar {
+    background-color: #3778c2;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-brand {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .backarrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 1rem;
   }
 }
