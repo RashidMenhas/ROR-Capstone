@@ -1,0 +1,36 @@
+ <nav class="navbar navbar-light">
+    <a class="navbar-brand" href="#">
+      <%= link_to authenticated_root_path, method: :get do %>
+        <%= image_tag('backarrow.png', class: 'backarrow') %>
+      <% end %>
+      <div class="text-center">
+        <h2>REGISTER</h2>
+      </div>
+      <p class='p'>next</p>
+    </a>
+  </nav>
+<div class="container">
+  <div class="child mt-2">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="field mb-3">
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder:'Full Name', class:'text-input form-control' %>
+      </div>
+      <div class="field mb-3">
+        <%= f.email_field :email, autocomplete: "email", placeholder:'Email', class:'text-input form-control' %>
+      </div>
+      <div class="field mb-3">
+        <% if @minimum_password_length %>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password", placeholder:'Password', class:'text-input form-control' %>
+      </div>
+      <div class="field mb-3">
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:'Confirmation Password', class:'text-input form-control' %>
+      </div>
+      <div class="actions mb-3">
+        <%= f.submit "Sign up", class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

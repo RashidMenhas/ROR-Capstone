@@ -1,0 +1,9 @@
+<div class="img position-relative d-flex flex-column align-items-center">
+  <h1 class='heading'>My Budget App</h1>
+  <%= image_tag ("img2.png") %>
+  
+</div>
+<div class="btn1 position-absolute bottom-0 start-50 translate-middle-x">
+    <%= button_to "Sign In", new_user_session_path, method: :get, class: 'btn btn-primary auth sign_in' %>
+    <%= button_to "Sign Up", new_user_registration_path, method: :get, class: 'auth sign_up' %>
+  </div>
