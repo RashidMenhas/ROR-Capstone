@@ -1,4 +1,4 @@
-<div>
+<div class="session">
   <div class="bg-primary nav">
     <div class="d-flex justify-content-center align-items-center gap-5">
       <div class="ms-4">
@@ -20,7 +20,7 @@
       <h6>Total Amount: $ <%= @group.expenses.sum(:amount) %></h6>
   </div>
   <div class="d-flex flex-column gap-2 mb-3 ms-3 me-3">
-    <div class="d-flex flex-row gap-3 border border-primary p-2">
+    <div class="d-flex flex-row gap-3 border card-bg p-2">
       <div class="ms-2 mt-1">
         <% if @group.icon.attached? %>
           <img src="<%=(url_for(@group.icon)) %>", alt="group-image", style="width:60px; height:60px;">
@@ -41,7 +41,7 @@
       </div>
     </div>
   </div>
-  <div class="d-flex justify-content-center align-items-center border border-success ms-5 me-5">
-    <%= link_to 'Add a New Transaction', new_group_expense_path(params[:group_id]), class: "text-success" %>
+  <div class="d-flex justify-content-center align-items-center categories">
+    <%= link_to 'Add a New Transaction', new_group_expense_path(params[:group_id]), class: "text-border" %>
   </div>
 </div>

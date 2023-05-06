@@ -1,4 +1,4 @@
-<div>
+<div class="session">
   <div class="bg-primary nav">
     <div class="ms-4 mt-3">
       <% if user_signed_in? %>
@@ -32,7 +32,7 @@
       </div>
     <% end %>
   </div>
-  <div class="d-flex justify-content-center align-items-center border border-success ms-5 me-5">
-    <%= link_to 'Add a New Category', new_group_path, class: "text-success"%>
+  <div class="d-flex justify-content-center align-items-center categories">
+    <%= link_to 'Add a New Category', new_group_path, class:'text-border' %>
   </div>
 </div>
